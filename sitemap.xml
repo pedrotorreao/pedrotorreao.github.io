@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pedrotorreao.github.io/misc/firstpost/</loc>
+    <loc>https://pedrotorreao.github.io/about/</loc>
+    <lastmod>2023-02-12T19:40:14-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedrotorreao.github.io/</loc>
+    <lastmod>2023-02-12T19:40:14-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedrotorreao.github.io/posts/misc/firstpost/</loc>
     <lastmod>2023-02-12T18:05:48-03:00</lastmod>
   </url>
   
@@ -13,17 +23,12 @@
   </url>
   
   <url>
-    <loc>https://pedrotorreao.github.io/misc/</loc>
+    <loc>https://pedrotorreao.github.io/posts/</loc>
     <lastmod>2023-02-12T18:05:48-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://pedrotorreao.github.io/tags/</loc>
-    <lastmod>2023-02-12T18:05:48-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedrotorreao.github.io/</loc>
     <lastmod>2023-02-12T18:05:48-03:00</lastmod>
   </url>
   

@@ -7,17 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
-    <lastBuildDate>Sun, 12 Feb 2023 18:05:48 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2023 19:40:14 -0300</lastBuildDate>
     
 	<atom:link href="https://pedrotorreao.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>About me</title>
+      <link>https://pedrotorreao.github.io/about/</link>
+      <pubDate>Sun, 12 Feb 2023 19:40:14 -0300</pubDate>
+      
+      <guid>https://pedrotorreao.github.io/about/</guid>
+      <description>Hello, my name is Pedro, but you can call me torras!
+I&amp;rsquo;m an electrical engineer, currently working as a Embedded Software Developer for the automotive industry. I figured out a little too late into my college time that I wanted to work specifically with software engineering, so ever since I graduated I&amp;rsquo;ve been trying to learn the fundamentals and build knowledge whenever I can, so that one day I&amp;rsquo;ll hopefully be able to fully migrate areas.</description>
+    </item>
+    
+    <item>
       <title>First Post</title>
-      <link>https://pedrotorreao.github.io/misc/firstpost/</link>
+      <link>https://pedrotorreao.github.io/posts/misc/firstpost/</link>
       <pubDate>Sun, 12 Feb 2023 18:05:48 -0300</pubDate>
       
-      <guid>https://pedrotorreao.github.io/misc/firstpost/</guid>
+      <guid>https://pedrotorreao.github.io/posts/misc/firstpost/</guid>
       <description>Hello, this is my first post, hopefully this time I got it right (not proud to admit that I struggled quite a bit)!
 I&amp;rsquo;ll be posting mostly about my learnings on software engineering in general, possibly some personal opinions and the occasional rant.
 Anyway, just a regular blog, if it happens to be of help to someone, awesome! Otherwise, it will entertain me (for some time).</description>
