@@ -119,24 +119,6 @@
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>;
 }
 </code></pre></div><ol start="2">
-<li>Linear - <code>O(n)</code>:</li>
-</ol>
-<p>If the total number of operations that an algorithm performs is directly proportional to the size of the input, it is said to have a linear runtime because, in the worst case scenario, the maximum number of operations will be equal to the input size.</p>
-<p>Suppose we&rsquo;re searching for a <code>target</code> element in an array of size <code>n</code> using a simple linear search. The algorithm checks each array element and compares it to <code>target</code> to see if there is a match. If there&rsquo;s a match, we return the position of <code>target</code> in the array. In the event that <code>target</code> is not present in the array, the algorithm will keep running until it gets to the end of the array. Since that, for the worst case, the number of times the algorithm will run is equal to the size of the input, <code>n</code>, it is said to have a linear runtime or <code>O(n)</code>.</p>
-<blockquote>
-<p>Example - Linear search:</p>
-</blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">searchArray</span>(<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>) {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>;
-
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>) {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>;
-    }
-  }
-  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-}
-</code></pre></div><ol start="3">
 <li>Logarithmic - <code>O(log n)</code>:</li>
 </ol>
 <p>If an algorithm has a time complexity of <code>O(log n)</code>, the bigger its input size, the smaller proportion of the actual input your program has to go through. A logarithmic algorithm is the opposite of an exponential one. When something grows exponentially, it means that, at each step, the number of operations is multiplied by a factor. Whereas, when an algorithm grows logarithmically, the number of operations needed is being divided by this factor at each step. Assuming the base of the logarithm as being <code>2</code>, this means that the size of the dataset that the algorithm has to go through gets divided by <code>2</code> at each step.</p>
@@ -207,7 +189,25 @@ step 25: 2.98 / 2 = ~1
 
 or simply, log(50000000) = ~25
 </code></pre></div><p>25 steps at worst, which is a huge improvement over the linear search. We can see that the growth rate of the runtime for both algorithms is very different, while linear search follows the size of the dataset, binary search gets faster in proportion as the size of the dataset grows.</p>
-<ol start="4">
+<ol start="3">
+<li>Linear - <code>O(n)</code>:</li>
+</ol>
+<p>If the total number of operations that an algorithm performs is directly proportional to the size of the input, it is said to have a linear runtime because, in the worst case scenario, the maximum number of operations will be equal to the input size.</p>
+<p>Suppose we&rsquo;re searching for a <code>target</code> element in an array of size <code>n</code> using a simple linear search. The algorithm checks each array element and compares it to <code>target</code> to see if there is a match. If there&rsquo;s a match, we return the position of <code>target</code> in the array. In the event that <code>target</code> is not present in the array, the algorithm will keep running until it gets to the end of the array. Since that, for the worst case, the number of times the algorithm will run is equal to the size of the input, <code>n</code>, it is said to have a linear runtime or <code>O(n)</code>.</p>
+<blockquote>
+<p>Example - Linear search:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">searchArray</span>(<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>;
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>;
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><ol start="4">
 <li>Quadratic - <code>O(n^2)</code>:</li>
 </ol>
 <p>Consider the following expansion of the algorithm for linear search to search for a <code>target</code> value inside a <code>nxn</code> matrix as can be seen in the example below, where <code>i</code> represents the row index and <code>j</code> represents the column index. We can see that for each value of <code>i</code> in the outer <code>for</code> loop, the algorithm in the inner <code>for</code> loop can run up to <code>n</code> times. Thus, in the event that <code>target</code> does not exist in the matrix or it is the last element, the code inside the inner for loop runs <code>n</code> times for each iteration of the outer loop, which also goes up to <code>n</code>. This way, the total numbers of operations is <code>O(n * n) -&gt; O(n^2)</code>.</p>
