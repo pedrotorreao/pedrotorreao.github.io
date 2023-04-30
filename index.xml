@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Big-O Overview</title>
+      <link>https://pedrotorreao.github.io/posts/big-o-overview/</link>
+      <pubDate>Sat, 29 Apr 2023 23:51:48 -0300</pubDate>
+      
+      <guid>https://pedrotorreao.github.io/posts/big-o-overview/</guid>
+      <description>Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&amp;rsquo;t be worse than its Big-O notation.</description>
+    </item>
+    
+    <item>
       <title>About me</title>
       <link>https://pedrotorreao.github.io/about/</link>
       <pubDate>Sun, 12 Feb 2023 19:40:14 -0300</pubDate>

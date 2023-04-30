@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on torras</title>
-    <link>https://pedrotorreao.github.io/posts/</link>
-    <description>Recent content in Posts on torras</description>
+    <title>dsa on torras</title>
+    <link>https://pedrotorreao.github.io/tags/dsa/</link>
+    <description>Recent content in dsa on torras</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
     <lastBuildDate>Sat, 29 Apr 2023 23:51:48 -0300</lastBuildDate>
     
-	<atom:link href="https://pedrotorreao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pedrotorreao.github.io/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>https://pedrotorreao.github.io/posts/big-o-overview/</guid>
       <description>Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&amp;rsquo;t be worse than its Big-O notation.</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://pedrotorreao.github.io/posts/misc/firstpost/</link>
-      <pubDate>Sun, 12 Feb 2023 18:05:48 -0300</pubDate>
-      
-      <guid>https://pedrotorreao.github.io/posts/misc/firstpost/</guid>
-      <description>Hello, this is my first post, hopefully this time I got it right (not proud to admit that I struggled quite a bit)!
-I&amp;rsquo;ll be posting mostly about my learnings on software engineering in general, possibly some personal opinions and the occasional rant.
-Anyway, just a regular blog, if it happens to be of help to someone, awesome! Otherwise, it will entertain me (for some time).</description>
     </item>
     
   </channel>

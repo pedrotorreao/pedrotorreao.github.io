@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Big-O Overview - torras</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&rsquo;t be worse than its Big-O notation." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Big-O Overview" />
+<meta property="og:description" content="Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&rsquo;t be worse than its Big-O notation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pedrotorreao.github.io/posts/big-o-overview/" />
+<meta property="article:published_time" content="2023-04-29T23:51:48-03:00" />
+<meta property="article:modified_time" content="2023-04-29T23:51:48-03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Big-O Overview"/>
+<meta name="twitter:description" content="Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&rsquo;t be worse than its Big-O notation."/>
+<script src="https://pedrotorreao.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://pedrotorreao.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://pedrotorreao.github.io/css/main.c76aaa13092eb40dc2cadd539920c0fe51a9741e1d01c64a212849372df228d4.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://pedrotorreao.github.io/css/dark.06f0966701fef6ec53810d459dc169d0a76bbe1bd98ca7f6ae9ba6f0ca2ebca3.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://pedrotorreao.github.io/">torras</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://pedrotorreao.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Big-O Overview</h1>
+			<div class="meta">Posted on Apr 29, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="big-o-time-and-space-complexity-analisys">Big-O: Time and Space Complexity Analisys</h2>
+<h3 id="definition">Definition</h3>
+<p>The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&rsquo;t be worse than its Big-O notation. The speed of an algorithm is not measured in seconds, but based on the growth of the number of operations, in other words, it is based on how quickly the runtime increases as the input size grows. Big-O allows us to express how the runtime scales.</p>
+<h3 id="common-big-o-notations">Common Big-O notations</h3>
+<p>The chart below ilustrates how the most common Big-O running times behave as the size of the input grows (source: <a href="https://www.bigocheatsheet.com/">Big-O Cheatsheet by Eric Rowell</a>).</p>
+<p><img src="/images/bigochart.png" alt="Big-O Chart"></p>
+<p>Common time complexities ordered from best to worst:</p>
+<ol>
+<li>Constant - <code>O(1)</code>:</li>
+</ol>
+<p>A <strong>constant</strong> runtime means that no matter the size of the input, the performance of the algorithm will be the same. Since this algorithm runtime does not depend on the size of the input, the number of operations remains constant and does not increase as the input size grows.</p>
+<p>It is good to mention, however, that a constant runtime does not mean that something happens instantaneously, but that the runtime will always be the same no matter how large the dataset is.</p>
+<blockquote>
+<p>Example: In the function <code>getMax</code> below, no matter the values of <code>a</code> and <code>b</code>, <code>getMax</code> always performs the same amount of operations.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getMax</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>;
+}
+</code></pre></div><ol start="2">
+<li>Linear - <code>O(n)</code>:</li>
+</ol>
+<p>If the total number of operations that an algorithm performs is directly proportional to the size of the input, it is said to have a linear runtime because, in the worst case scenario, the maximum number of operations will be equal to the input size.</p>
+<p>Suppose we&rsquo;re searching for a <code>target</code> element in an array of size <code>n</code> using a simple linear search. The algorithm checks each array element and compares it to <code>target</code> to see if there is a match. If there&rsquo;s a match, we return the position of <code>target</code> in the array. In the event that <code>target</code> is not present in the array, the algorithm will keep running until it gets to the end of the array. Since that, for the worst case, the number of times the algorithm will run is equal to the size of the input, <code>n</code>, it is said to have a linear runtime or <code>O(n)</code>.</p>
+<blockquote>
+<p>Example - Linear search:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">searchArray</span>(<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>;
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>;
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><ol start="3">
+<li>Logarithmic - <code>O(log n)</code>:</li>
+</ol>
+<p>If an algorithm has a time complexity of <code>O(log n)</code>, the bigger its input size, the smaller proportion of the actual input your program has to go through. A logarithmic algorithm is the opposite of an exponential one. When something grows exponentially, it means that, at each step, the number of operations is multiplied by a factor. Whereas, when an algorithm grows logarithmically, the number of operations needed is being divided by this factor at each step. Assuming the base of the logarithm as being <code>2</code>, this means that the size of the dataset that the algorithm has to go through gets divided by <code>2</code> at each step.</p>
+<p>A traditional example for <code>O(log n)</code> runtime is binary search. Consider an <strong>ordered</strong> <code>array</code> of size <code>n</code> and a <code>target</code> value. If we were to use linear search to find <code>target</code> in <code>array</code>, in the worst case scenario that we begin at the first position in <code>array</code> and <code>target</code> is the last element, we&rsquo;d have to search the entire <code>array</code>, thus performing <code>n</code> comparisons. However, using a binary search algorithm like the one below, since at each step we half the amount of elements to be searched, the total number of operations necessary is at most <code>log (input_size)</code> or <code>log n</code>.</p>
+<blockquote>
+<p>Example - Binary search:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">binarySearch</span>(<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+
+  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">start</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">end</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">start</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">start</span>;
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">end</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">end</span>;
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>((<span style="color:#a6e22e">start</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">end</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">mid</span>]) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mid</span>;
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">mid</span>]) <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">mid</span>]) <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><blockquote>
+<p>Example:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">array = [11, 23, 30, 45, 51, 62, 70, 89, 95, 100, 110]
+target = 100
+
+start = 0
+end = array.length - 1 = 10
+
+step 1 - dataset searched [11, 23, 30, 45, 51, 62, 70, 89, 95, 100, 110]
+  array[start] != target
+  array[end] != target
+
+  mid = (start + end) / 2 = 10 / 2 = 5
+
+  target &gt; array[mid] -- 100 &gt; 62:
+    start = mid + 1 = 6
+
+step 2 - dataset searched [x x x x x x 70, 89, 95, 100, 110]
+  array[start] != target
+  array[end] != target
+
+  mid = (start + end) / 2 = (6+10) / 2 = 8
+  target &gt; array[mid] -- 100 &gt; 95:
+    start = mid + 1 = 9
+
+step 3 - dataset searched [x x x x x x x x x 100, 110]
+  array[start] == target: return start -- return 9
+</code></pre></div><p>As we can see, we begin with an <code>n</code> sized array to search. After the first step, we&rsquo;re searching through only <code>n/2</code> elements. One more step and we&rsquo;re down to <code>n/4</code> elements to search. We are done when we either find <code>target</code> or we&rsquo;re down to only one element.</p>
+<p>The total runtime can be expressed as how many steps, dividing <code>n</code> by two each time, we need too take until <code>n</code> becomes 1. For the example above, where <code>n = 11</code>:</p>
+<blockquote>
+<p># of steps: <code>log(n) = log(11) = ~3</code>, which matches our example.</p>
+</blockquote>
+<p>Let&rsquo;s apply this reasonig to a larger dataset. Consider now that we want to find a person by searching for his registered unique <code>ID</code> in an ordered database containing fifty million registered <code>ID</code>s. If we decide to use linear search here, in the event that our target <code>ID</code> is the last in the dataset or does not exist, we&rsquo;d have to look and compare all the fifty million elements in the dataset. However, if we were to use binary search to find the person, that would take:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">step 1: 50000000 / 2 = 25000000
+step 2: 25000000 / 2 = 12500000
+step 3: 12500000 / 2 = 6250000
+step 4: 6250000 / 2 = 3125000
+step 5: 3125000 / 2 = 1562500
+step 6: 1562500 / 2 = 781250
+...
+step 25: 2.98 / 2 = ~1
+
+or simply, log(50000000) = ~25
+</code></pre></div><p>25 steps at worst, which is a huge improvement over the linear search. We can see that the growth rate of the runtime for both algorithms is very different, while linear search follows the size of the dataset, binary search gets faster in proportion as the size of the dataset grows.</p>
+<ol start="4">
+<li>Quadratic - <code>O(n^2)</code>:</li>
+</ol>
+<p>Consider the following expansion of the algorithm for linear search to search for a <code>target</code> value inside a <code>nxn</code> matrix as can be seen in the example below, where <code>i</code> represents the row index and <code>j</code> represents the column index. We can see that for each value of <code>i</code> in the outer <code>for</code> loop, the algorithm in the inner <code>for</code> loop can run up to <code>n</code> times. Thus, in the event that <code>target</code> does not exist in the matrix or it is the last element, the code inside the inner for loop runs <code>n</code> times for each iteration of the outer loop, which also goes up to <code>n</code>. This way, the total numbers of operations is <code>O(n * n) -&gt; O(n^2)</code>.</p>
+<blockquote>
+<p>Example - Linear search in a <code>nxn</code> matrix:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">searchMatrix</span>(<span style="color:#a6e22e">matrix</span>, <span style="color:#a6e22e">target</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">matrix</span>.<span style="color:#a6e22e">length</span>;
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">j</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">matrix</span>[<span style="color:#a6e22e">i</span>][<span style="color:#a6e22e">j</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">target</span>) {
+        <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>];
+      }
+    }
+  }
+}
+</code></pre></div><p>Other common running times:</p>
+<ol>
+<li>
+<p>Linearithmic - <code>O(n * log n)</code>: <a href="../Algorithms/Sorting/Merge%20Sort/mergeSort.cpp">Merge Sort</a></p>
+</li>
+<li>
+<p>Exponential - <code>O(b^n)</code>, where b &gt; 1: <a href="../Problems/Others/factorialCalc.cpp">Fibonacci</a></p>
+</li>
+<li>
+<p>Factorial - <code>O(n!)</code>: Generate all the permutations of a list</p>
+</li>
+</ol>
+<h3 id="determining-the-big-o-notation">Determining the Big-O notation</h3>
+<h4 id="general-rules">General rules</h4>
+<ol>
+<li>
+<p>Different steps get added. Also, different inputs means different variables.</p>
+<ul>
+<li>Example - Find out the largest value between two arrays:</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">findMax</span>(<span style="color:#a6e22e">arr_A</span>, <span style="color:#a6e22e">arr_B</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_A</span>[<span style="color:#ae81ff">0</span>];
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">max_B</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_B</span>[<span style="color:#ae81ff">0</span>];
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr_A</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max_A</span>) {
+      <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>];
+    }
+  }
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr_B</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr_B</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max_B</span>) {
+      <span style="color:#a6e22e">max_B</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_B</span>[<span style="color:#a6e22e">j</span>];
+    }
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max_B</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">max_B</span>;
+}
+</code></pre></div><p>Consider the size of <code>arr_A</code> and <code>arr_B</code> as being <code>A</code> and <code>B</code> respectively. Since all the other operations are just comparisons or assignments that don&rsquo;t depend on the size of the arrays, they have constant runtime, <code>O(1)</code>, Thus, the time complexity of this algorithm will be the sum of the runtimes for calculating the largest element in each array, <code>O(A + B)</code>.</p>
+<ol start="2">
+<li>
+<p>Drop the constants</p>
+<ul>
+<li>Example - Find min and max elements in a given array:</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">findMin</span>(<span style="color:#a6e22e">arr_A</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">min_A</span> <span style="color:#f92672">=</span> Number.<span style="color:#a6e22e">MAX_SAFE_INTEGER</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">=</span> Number.<span style="color:#a6e22e">MIN_SAFE_INTEGER</span>;
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr_A</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max_A</span>) {
+      <span style="color:#a6e22e">max_A</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>];
+    }
+  }
+
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr_A</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">min_A</span>) {
+      <span style="color:#a6e22e">min_A</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr_A</span>[<span style="color:#a6e22e">i</span>];
+    }
+  }
+
+  <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">min_A</span>, <span style="color:#a6e22e">max_A</span>];
+}
+</code></pre></div><p>Consider the size of <code>arr_A</code> as being <code>n</code>. The time complexity of this algorithm will be the sum of the runtimes for calculating the largest and smallest element in <code>arr_A</code>. Thus, we may be tempted to think that the runtime would be <code>O(n + n) = O(2n)</code>. However, Big-O just describes the rate of increase of the runtime, so we keep only the part that depends on the input, i.e., the variable part, so the time complexity of this algorithm is <code>O(n)</code>.</p>
+<ol start="3">
+<li>
+<p>Drop the non-dominant terms</p>
+<ul>
+<li>Example:</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">- O(n^2 + 5n) becomes O(n^2)
+- O(10000*n + 5500000000*logn) becomes O(n)
+- O(500*n^25 + 2^n) becomes O(2^n)
+</code></pre></div><h4 id="steps">Steps:</h4>
+<ol>
+<li>Identify your code</li>
+<li>Identify what <code>n</code> means</li>
+<li>Count the steps in a typical run (Rule #1)</li>
+<li>Keep the most significant part (Rules #2 and #3)</li>
+</ol>
+<h3 id="space-complexity">Space Complexity</h3>
+<p>All that we&rsquo;ve seen so far was related to Time Complexity analysis. However, that&rsquo;s not the only important thing to take into account when designing an algorithm. We might also have memory consumption constraints that our algorithm must comply with. The concept that allows us to express how the memory consumption scales in a algorithm is called Space Complexity.</p>
+<p>Consider an algorithm that takes an array <code>arr</code> of size <code>n</code>, performs an operation in each of <code>arr</code>'s elements and stores the result in a new array of the same size. Since the memory consumption is proportional to <code>arr</code>'s size, the space complexity this algorithm will be <code>O(n)</code>.</p>
+<p>We must also take into account stack space in recursive calls. Consider the algorithm below for calculating the factorial of a number.</p>
+<blockquote>
+<p>Example - Factorial calculation:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">factorialRecursively</span>(<span style="color:#a6e22e">n</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">n</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">factorialRecursively</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">factorialRecursively(5):
+    ...
+    factorialRecursively(4):
+        ...
+        factorialRecursively(3):
+            ...
+            factorialRecursively(2):
+                ...
+                factorialRecursively(1) --&gt; stack unwind
+</code></pre></div><p>Each call to <code>factorialRecursively</code> is added to the call stack and takes up actual memory. Thus, since this algorithm will perform <code>n</code> calls until it reaches the base case, it has a space complexity of <code>O(n)</code>.</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://www.manning.com/books/grokking-algorithms">Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People</a></li>
+<li><a href="https://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a></li>
+</ul>
+<h3 id="data-structures--algorithms---indexreadmemd"><a href="../README.md">Data Structures &amp; Algorithms - Index</a></h3>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/dsa">dsa</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display: flex"><a class="soc" href="https://github.com/pedrotorreao/" rel="me" title="GitHub"
+      ><i data-feather="github"></i
+    ></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/tttorras/" rel="me" title="Twitter"
+      ><i data-feather="twitter"></i
+    ></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/pedrotorreao/" rel="me" title="LinkedIn"
+      ><i data-feather="linkedin"></i
+    ></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © torras | 
+    <a href="https://github.com/athul/archie">Based on Archie Theme</a> | Built
+    with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+  feather.replace();
+</script></div>
+    </body>
+</html>
