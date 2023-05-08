@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Arrays</title>
+      <link>https://pedrotorreao.github.io/posts/arrays/</link>
+      <pubDate>Sun, 07 May 2023 22:12:26 -0300</pubDate>
+      
+      <guid>https://pedrotorreao.github.io/posts/arrays/</guid>
+      <description>Array Definition Array is a fundamental data structure which consists of a collection of elements and all elements are of the same type. Array elements can be accessed directly by using its position/index keeping in mind that arrays are zero-based which means that its position count begins at 0.
+Arrays are usually stored contiguously in memory, which just means that all elements are stored sequentially one after the other in memory.</description>
+    </item>
+    
+    <item>
       <title>Big-O Overview</title>
       <link>https://pedrotorreao.github.io/posts/big-o-overview/</link>
       <pubDate>Sat, 29 Apr 2023 23:51:48 -0300</pubDate>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dsa on torras</title>
-    <link>https://pedrotorreao.github.io/tags/dsa/</link>
-    <description>Recent content in dsa on torras</description>
+    <title>data-structures on torras</title>
+    <link>https://pedrotorreao.github.io/tags/data-structures/</link>
+    <description>Recent content in data-structures on torras</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
     <lastBuildDate>Sun, 07 May 2023 22:12:26 -0300</lastBuildDate>
     
-	<atom:link href="https://pedrotorreao.github.io/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pedrotorreao.github.io/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <guid>https://pedrotorreao.github.io/posts/arrays/</guid>
       <description>Array Definition Array is a fundamental data structure which consists of a collection of elements and all elements are of the same type. Array elements can be accessed directly by using its position/index keeping in mind that arrays are zero-based which means that its position count begins at 0.
 Arrays are usually stored contiguously in memory, which just means that all elements are stored sequentially one after the other in memory.</description>
-    </item>
-    
-    <item>
-      <title>Big-O Overview</title>
-      <link>https://pedrotorreao.github.io/posts/big-o-overview/</link>
-      <pubDate>Sat, 29 Apr 2023 23:51:48 -0300</pubDate>
-      
-      <guid>https://pedrotorreao.github.io/posts/big-o-overview/</guid>
-      <description>Big-O: Time and Space Complexity Analisys Definition The Big-O notation provides us the information of how fast a given algorithm is. It allows us to compare the number of operations and informs us of how quickly the algorithm grows. This particular way of measuring the runtime of an algorithm takes into account the worst case, i.e. in the worst possible scenario we can be sure that an algorithm performance won&amp;rsquo;t be worse than its Big-O notation.</description>
     </item>
     
   </channel>
