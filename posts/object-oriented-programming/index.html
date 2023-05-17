@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Object Oriented Programming (OOP) - torras</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Object Oriented Programming (OOP)" />
+<meta property="og:description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pedrotorreao.github.io/posts/object-oriented-programming/" />
+<meta property="article:published_time" content="2023-05-16T19:22:42-03:00" />
+<meta property="article:modified_time" content="2023-05-16T19:22:42-03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Object Oriented Programming (OOP)"/>
+<meta name="twitter:description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities."/>
+<script src="https://pedrotorreao.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://pedrotorreao.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://pedrotorreao.github.io/css/main.c76aaa13092eb40dc2cadd539920c0fe51a9741e1d01c64a212849372df228d4.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://pedrotorreao.github.io/css/dark.06f0966701fef6ec53810d459dc169d0a76bbe1bd98ca7f6ae9ba6f0ca2ebca3.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://pedrotorreao.github.io/">torras</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://pedrotorreao.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Object Oriented Programming (OOP)</h1>
+			<div class="meta">Posted on May 16, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="basics">Basics</h2>
+<p>Programming paradigm which focuses on the organization of the software into reusable pieces of code called <em><code>classes</code></em>, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for <em><code>objects</code></em>. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</p>
+<p>Classes are usually defined in terms of <code>attributes</code> and <code>methods</code>:</p>
+<ul>
+<li>Attributes represent the state of an object and they are used to store relevant data.</li>
+<li>Methods are functions defined inside a class that describe the behaviors of an object.</li>
+</ul>
+<p>In the UML diagram below, we have a very basic <code>Person</code> class which contains a few private attributes and public methods:</p>
+<p><img src="/images/oop_class_1.png" alt="OOP_class_example_1"></p>
+<p>Below is a C++ implementation of this class:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    string name;
+    string country;
+    string occupation;
+    <span style="color:#66d9ef">int</span> age;
+  <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#75715e">// constructor:
+</span><span style="color:#75715e"></span>    Person(string name, string country, string occupation, <span style="color:#66d9ef">int</span> age)
+      <span style="color:#f92672">:</span> name{name}, country{country}, occupation{occupation}, age{age} {}
+    <span style="color:#75715e">// destructor:
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">~</span>Person(){}
+    <span style="color:#75715e">// getters:
+</span><span style="color:#75715e"></span>    string <span style="color:#a6e22e">getName</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>name;
+    }
+    string <span style="color:#a6e22e">getNationality</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>country;
+    }
+    <span style="color:#75715e">// setters:
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">changeJob</span>(<span style="color:#66d9ef">const</span> string <span style="color:#f92672">&amp;</span>newJob){
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>occupation <span style="color:#f92672">=</span> newJob;
+    }
+    ...
+};
+</code></pre></div><p>The terms <em><code>public</code></em> and <em><code>private</code></em> are called access specifiers. Besides these two, in C++ there is also <em><code>protected</code></em>. As the name implies, access specifiers are keywords which define the accessibility of class members, i.e. which class members can be accessed/viewed by the users (code outside the class which declared the attributes/methods) of the class and which ones are to be accessed/seen only internally by the class itself. See below a short description for the specifiers mentioned.</p>
+<ul>
+<li><em><code>public</code></em>: access is allowed from outside the class;</li>
+<li><em><code>private</code></em>: access is not allowed from outside the class, internal use only;</li>
+<li><em><code>protected</code></em>: access is not allowed from outside the class, but inherited classes are allowed access.</li>
+</ul>
+<p>In addition to objects, it is also possible to derive other classes from a given class. For cases like this, the original class, the class from which the others are derived, is often called <em><code>base class</code></em> or <em><code>superclass</code></em>, while the derived classes are called <em><code>subclasses</code></em>. Subclasses inherit the states and behaviors from their <em><code>base class</code></em> and define only attributes/methods which differ. They can also override the methods inherited, completely replacing the original behavior or just modifying it. A set of classes and subclasses can be represented by its class hierarchy.</p>
+<p>To better understand these concepts, let&rsquo;s derive two classes from the <code>Person</code> class defined above, the <code>Teenager</code> and <code>Adult</code> classes. See below a UML diagram representing this class hierarchy.</p>
+<p><img src="/images/oop_class_2.png" alt="OOP_class_example_2"></p>
+<p>Both subclasses <code>Teenager</code> and <code>Adult</code> inherit the methods and attributes from the <code>Person</code> class and each one extended the original functionality in their own way.</p>
+<p>Below are basic C++ implementations of these classes. Keep in mind that, as done for the previous example, for the sake of simplicity, I&rsquo;ve omitted important aspects like data validation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teenager</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Person {
+  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    string schoolYear;
+    string dreamJob;
+  <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    Teenager(string name, string country, string occupation, <span style="color:#66d9ef">int</span> age, string schoolYear, string dreamJob)
+      <span style="color:#f92672">:</span> Person{name, country, occupation}, schoolYear{schoolYear}, dreamJob{dreamJob} {}
+
+    <span style="color:#f92672">~</span>Teenager(){}
+
+    string <span style="color:#a6e22e">getSchoolYear</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>schoolYear;
+    }
+    string <span style="color:#a6e22e">getDreamJob</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>dreamJob;
+    }
+
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateSchoolYear</span>(string newSchoolYear){
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>schoolYear <span style="color:#f92672">=</span> newSchoolYear;
+    }
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateDreamJob</span>(string newDreamJob){
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>dreamJob <span style="color:#f92672">=</span> newDreamJob;
+    }
+    ...
+};
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Adult</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Person{
+  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    boolean married;
+    <span style="color:#66d9ef">int</span> children;
+  <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    Adult(string name, string country, string occupation, <span style="color:#66d9ef">int</span> age, boolean married, <span style="color:#66d9ef">int</span> children)
+      <span style="color:#f92672">:</span> Person{name, country, occupation}, married{married}, children{children} {}
+
+    <span style="color:#f92672">~</span>Adult(){}
+
+    boolean <span style="color:#a6e22e">isMarried</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>married;
+    }
+    string <span style="color:#a6e22e">getChildrenNumber</span>(){
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>children;
+    }
+    ...
+};
+</code></pre></div><p>Notice that, at least in C++, the <code>inherited</code> part of the subclass <strong>MUST</strong> be initialized <strong>BEFORE</strong> the subclass is initialized. When a subclass is created, the base class&rsquo; constructor executes first, then the subclass&rsquo; constructor is called. However, it&rsquo;s very important to mention the fact that a subclass <strong>DOES NOT</strong> inherit the base class&rsquo; constructors, destructors, overloaded assignment operators and class <code>friend</code> functions. So, in order for the base class attributes to be initialized, the desired constructor must be directly invoked from the derived class. That&rsquo;s what we see in these parts of the code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">...
+Teenager(string schoolYear, string dreamJob)
+      <span style="color:#f92672">:</span> Person(name, country, occupation), schoolYear{schoolYear}, dreamJob{dreamJob} {}
+
+...
+Adult(boolean married, <span style="color:#66d9ef">int</span> children)
+      <span style="color:#f92672">:</span> Person(name, country, occupation), married{married}, children{children} {}
+
+...
+</code></pre></div><h2 id="pillars">Pillars</h2>
+<p>Object Oriented Programming (OOP) relies heavily on a set of four core principles. These are <strong>Encapsulation</strong>, <strong>Abstraction</strong>, <strong>Inheritance</strong> and <strong>Polymorphism</strong>.</p>
+<h3 id="_encapsulation_"><em>Encapsulation</em></h3>
+<p>This principle is all about controlling what information is exposed to external parties. In the previous section, I talked about <code>access specifiers</code>, here&rsquo;s where they shine.</p>
+<p>Encapsulation represents the ability of an object to keep states and behaviors that should not be seen/modified by other objects hidden. This encapsulation is done by making these attributes and methods <em><code>private</code></em>. Thus, in order to be able to interact with the rest of the program, the object exposes only what is relevant to these interactions through <em><code>public</code></em> methods and <code>interfaces</code>.This helps to increase security since it provides a way to avoid that outside parties mess with an object&rsquo;s data unless they are explicitly allowed to. It also makes it easier to collaborate with others without having to worry about compromising sensitive information by hiding all the inner workings.</p>
+<h3 id="_abstraction_"><em>Abstraction</em></h3>
+<p>An abstraction is a model of a real-world object or event, limited to a specific context, focusing on the details which are relevant to said context while omitting the rest. As an example of abstraction, let&rsquo;s think of how we use a coffee machine. We don&rsquo;t really need to know all about its inner workings, its electronics, and the process they perform in order to make coffee. Most of the time it&rsquo;s just a matter of pushing a button. Thus, all the engineering and unnecessary details that are not relevant to the user are hidden, and only an interface (i.e. the button) is exposed, <em>&ldquo;abstracting away&rdquo;</em> the complexity.</p>
+<p>Similar to what was shown for encapsulation, abstraction uses classes to model real-world scenarios and hides the details behind <em><code>private</code></em> attributes and methods, exposing only what is relevant through high-level mechanisms such as <em><code>public</code></em> methods and <code>interfaces</code>.</p>
+<h3 id="inheritance">Inheritance</h3>
+<p>We&rsquo;ve touched on this principle previously when discussing the basics of OOP. Inheritance represents the ability to create new classes from existing ones. The main benefit here is reusability, thus reducing the amount of duplicated code.</p>
+<p>Objects may share a lot of similarities, maybe they have the same attributes or share the same logics. In this way, if the need arises for a class with similar class members to an existing one, instead of repeating the same code over and over, we may simply derive a <em><code>subclass</code></em> from the existing class (<em><code>parent/base class</code></em>), extending its functionality by adding the missing pieces (new attributes and/or methods). By doing this, the common class members are kept in the <em><code>parent</code></em> class, while the unique attributes/methods are kept in its <em><code>subclasses</code></em>, so each class adds only what is missing to it while reusing the common logic shared by the <em><code>parent</code></em> class. This forms a class hierarchy, as seen before.</p>
+<h3 id="polymorphism">Polymorphism</h3>
+<p>By making use of polymorphism, we can have class-specific behavior for the same inherited method (same function signature). This can be achieved by defining the <em><code>parent</code></em> class as an <em><code>abstract class</code></em> or <em><code>interface</code></em>. This interface is responsible for outlining the common methods which will be overriden by the <em><code>subclasses</code></em> to implement their specific versions of it.</p>
+<p>The example below shows a simple application of polymorphism. The parent class <code>Citizen</code> is an <code>interface</code>, created by adding a pure virtual function to a C++ abstract class. The pure virtual function <code>greet()</code> must be overriden by each subclass derived from <code>Citizen</code> if we want them to be concrete classes and not also interfaces.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// abstract class
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Citizen</span> {
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+      <span style="color:#75715e">// pure virtual function, this is what make this class an
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// abstract class and it must be overriden by subclasses:
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> greet(<span style="color:#66d9ef">void</span>) <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+};
+
+<span style="color:#75715e">// each subclass below implement their own version of &#34;greet()&#34;
+</span><span style="color:#75715e">// by overriding the inherited method:
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Brazilian</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Citizen {
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> greet(<span style="color:#66d9ef">void</span>) <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">override</span> {
+            std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Olá! Como você está?</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+        }
+};
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Spanish</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Citizen {
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> greet(<span style="color:#66d9ef">void</span>) <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">override</span> {
+            std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;¡Oye! ¿Cómo estás?</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+        }
+};
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">German</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Citizen {
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> greet(<span style="color:#66d9ef">void</span>) <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">override</span> {
+            std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hallo! Wie geht es dir?</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+        }
+};
+
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    Brazilian<span style="color:#f92672">*</span> br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Brazilian();
+    br<span style="color:#f92672">-&gt;</span>greet(); <span style="color:#75715e">// calls the Brazilian class version of greet()
+</span><span style="color:#75715e"></span>
+    Spanish<span style="color:#f92672">*</span> sp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Spanish();
+    sp<span style="color:#f92672">-&gt;</span>greet(); <span style="color:#75715e">// calls the Spanish class version of greet()
+</span><span style="color:#75715e"></span>
+    German<span style="color:#f92672">*</span> ge <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> German();
+    ge<span style="color:#f92672">-&gt;</span>greet(); <span style="color:#75715e">// calls the German class version of greet()
+</span><span style="color:#75715e"></span>
+    Citizen<span style="color:#f92672">*</span> cz <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Brazilian(); <span style="color:#75715e">// a Brazilian is a Citizen
+</span><span style="color:#75715e"></span>    cz<span style="color:#f92672">-&gt;</span>greet(); <span style="color:#75715e">// calls the Brazilian class version of greet()
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// Since subclasses share an &#39;is-a&#39; relationship with the parent
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// class (i.e. a German is a Citizen, etc), we can add any subclass
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to the Citizen vector &#39;ctzs&#39;:
+</span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Citizen<span style="color:#f92672">*&gt;</span> ctzs;
+    ctzs.push_back(br);
+    ctzs.push_back(sp);
+    ctzs.push_back(ge);
+    ctzs.push_back(cz);
+
+    <span style="color:#75715e">// Now, polymorphism makes sure that when iterating through all
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// elements of &#39;ctzs&#39; and calling the &#34;greet()&#34; method, the correct
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// subclass version of it is called without us having to write specific
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// versions of this to each subclass:
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>ct : ctzs)
+        ct<span style="color:#f92672">-&gt;</span>greet();
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>Thanks for reading, I hope you found this article useful!</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/design-patterns">design-patterns</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display: flex"><a class="soc" href="https://github.com/pedrotorreao/" rel="me" title="GitHub"
+      ><i data-feather="github"></i
+    ></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/tttorras/" rel="me" title="Twitter"
+      ><i data-feather="twitter"></i
+    ></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/pedrotorreao/" rel="me" title="LinkedIn"
+      ><i data-feather="linkedin"></i
+    ></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © torras | 
+    <a href="https://github.com/athul/archie">Based on Archie Theme</a> | Built
+    with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+  feather.replace();
+</script></div>
+    </body>
+</html>
