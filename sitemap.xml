@@ -3,22 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pedrotorreao.github.io/tags/life/</loc>
+    <lastmod>2023-09-17T00:25:37-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedrotorreao.github.io/posts/</loc>
+    <lastmod>2023-09-17T00:25:37-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedrotorreao.github.io/tags/</loc>
+    <lastmod>2023-09-17T00:25:37-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedrotorreao.github.io/posts/musashi-dokkodo/</loc>
+    <lastmod>2023-09-17T00:25:37-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pedrotorreao.github.io/tags/design-patterns/</loc>
     <lastmod>2023-05-16T19:22:42-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://pedrotorreao.github.io/posts/object-oriented-programming/</loc>
-    <lastmod>2023-05-16T19:22:42-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedrotorreao.github.io/posts/</loc>
-    <lastmod>2023-05-16T19:22:42-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedrotorreao.github.io/tags/</loc>
     <lastmod>2023-05-16T19:22:42-03:00</lastmod>
   </url>
   

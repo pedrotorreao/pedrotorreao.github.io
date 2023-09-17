@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
-    <lastBuildDate>Tue, 16 May 2023 19:22:42 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 17 Sep 2023 00:25:37 -0300</lastBuildDate>
     
 	<atom:link href="https://pedrotorreao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>life</title>
+      <link>https://pedrotorreao.github.io/tags/life/</link>
+      <pubDate>Sun, 17 Sep 2023 00:25:37 -0300</pubDate>
+      
+      <guid>https://pedrotorreao.github.io/tags/life/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>design-patterns</title>
