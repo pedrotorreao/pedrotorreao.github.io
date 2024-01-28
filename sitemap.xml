@@ -1,79 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://pedrotorreao.github.io/tags/life/</loc>
     <lastmod>2023-09-17T00:25:37-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/</loc>
     <lastmod>2023-09-17T00:25:37-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/tags/</loc>
     <lastmod>2023-09-17T00:25:37-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/musashi-dokkodo/</loc>
     <lastmod>2023-09-17T00:25:37-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://pedrotorreao.github.io/</loc>
+    <lastmod>2023-09-17T00:25:37-03:00</lastmod>
+  </url><url>
     <loc>https://pedrotorreao.github.io/tags/design-patterns/</loc>
     <lastmod>2023-05-16T19:22:42-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/object-oriented-programming/</loc>
     <lastmod>2023-05-16T19:22:42-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/arrays/</loc>
     <lastmod>2023-05-07T22:12:26-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/tags/data-structures/</loc>
     <lastmod>2023-05-07T22:12:26-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/tags/dsa/</loc>
     <lastmod>2023-05-07T22:12:26-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/big-o-overview/</loc>
     <lastmod>2023-04-29T23:51:48-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/about/</loc>
     <lastmod>2023-02-12T19:40:14-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedrotorreao.github.io/</loc>
-    <lastmod>2023-02-12T19:40:14-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/posts/misc/firstpost/</loc>
     <lastmod>2023-02-12T18:05:48-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/tags/general/</loc>
     <lastmod>2023-02-12T18:05:48-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://pedrotorreao.github.io/categories/</loc>
   </url>
-  
 </urlset>

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
-    <lastBuildDate>Sun, 12 Feb 2023 19:40:14 -0300</lastBuildDate>
-    
-	<atom:link href="https://pedrotorreao.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 Sep 2023 00:25:37 -0300</lastBuildDate><atom:link href="https://pedrotorreao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts on Musashi&#39;s Dokkōdō</title>
       <link>https://pedrotorreao.github.io/posts/musashi-dokkodo/</link>
@@ -27,7 +23,7 @@
       <pubDate>Tue, 16 May 2023 19:22:42 -0300</pubDate>
       
       <guid>https://pedrotorreao.github.io/posts/object-oriented-programming/</guid>
-      <description>Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</description>
+      <description>Basics OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</description>
     </item>
     
     <item>

@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© torras</copyright>
-    <lastBuildDate>Tue, 16 May 2023 19:22:42 -0300</lastBuildDate>
-    
-	<atom:link href="https://pedrotorreao.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 16 May 2023 19:22:42 -0300</lastBuildDate><atom:link href="https://pedrotorreao.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Object Oriented Programming (OOP)</title>
       <link>https://pedrotorreao.github.io/posts/object-oriented-programming/</link>
       <pubDate>Tue, 16 May 2023 19:22:42 -0300</pubDate>
       
       <guid>https://pedrotorreao.github.io/posts/object-oriented-programming/</guid>
-      <description>Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</description>
+      <description>Basics OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</description>
     </item>
     
   </channel>

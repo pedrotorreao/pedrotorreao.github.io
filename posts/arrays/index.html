@@ -9,9 +9,10 @@ Arrays are usually stored contiguously in memory, which just means that all elem
 <meta property="og:description" content="Array Definition Array is a fundamental data structure which consists of a collection of elements and all elements are of the same type. Array elements can be accessed directly by using its position/index keeping in mind that arrays are zero-based which means that its position count begins at 0.
 Arrays are usually stored contiguously in memory, which just means that all elements are stored sequentially one after the other in memory." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pedrotorreao.github.io/posts/arrays/" />
+<meta property="og:url" content="https://pedrotorreao.github.io/posts/arrays/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-07T22:12:26-03:00" />
 <meta property="article:modified_time" content="2023-05-07T22:12:26-03:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arrays"/>
 <meta name="twitter:description" content="Array Definition Array is a fundamental data structure which consists of a collection of elements and all elements are of the same type. Array elements can be accessed directly by using its position/index keeping in mind that arrays are zero-based which means that its position count begins at 0.
@@ -115,58 +116,58 @@ Arrays are usually stored contiguously in memory, which just means that all elem
 <li>Declaring an array</li>
 </ul>
 <p><em>Syntax</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">element_data_type array_name [ number_of_elements ];
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">element_data_type array_name [ number_of_elements ];
 </code></pre></div><p><em>Example 1</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> scores[<span style="color:#ae81ff">5</span>]; <span style="color:#75715e">/* array of integers that contains 5 elements */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> scores[<span style="color:#ae81ff">5</span>]; <span style="color:#75715e">/* array of integers that contains 5 elements */</span>
 </code></pre></div><p>In the example above <code>scores</code> is not initialized, which means that we don&rsquo;t know what are the values stored in each of its positions. It is best practice to always initalize arrays to avoid them holding unpredictable data.</p>
 <ul>
 <li>Initializing an array</li>
 </ul>
 <p><em>Syntax</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index] <span style="color:#f92672">=</span> value;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index] <span style="color:#f92672">=</span> value;
 </code></pre></div><p><em>Example 2</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">scores[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>; <span style="color:#75715e">/* assigns 100 to the fourth array position */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">scores[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>; <span style="color:#75715e">/* assigns 100 to the fourth array position */</span>
 </code></pre></div><p>It is possible to declare and initialize an array in a single line by using an array list. See below.</p>
 <p><em>Example 3</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> scores[<span style="color:#ae81ff">5</span>] {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">99</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">90</span>};
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> scores[<span style="color:#ae81ff">5</span>] {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">99</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">90</span>};
 </code></pre></div><h3 id="accessing--modifying">Accessing &amp; Modifying</h3>
 <ul>
 <li>Accessing array elements</li>
 </ul>
 <p><em>Syntax</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index]
 </code></pre></div><p><em>Example 4</em> - considering the initialized array of <em>Example 3</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl; <span style="color:#75715e">/* outputs 99 to the console */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl; <span style="color:#75715e">/* outputs 99 to the console */</span>
 </code></pre></div><ul>
 <li>Modifying array elements</li>
 </ul>
 <p><em>Syntax</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index] <span style="color:#f92672">=</span> new_value
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">array_name[element_index] <span style="color:#f92672">=</span> new_value
 </code></pre></div><p><em>Example 5</em> - considering the initialized array of <em>Example 3</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">scores[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">93</span>; <span style="color:#75715e">/* changes value at the first position of the array to 93*/</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">scores[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">93</span>; <span style="color:#75715e">/* changes value at the first position of the array to 93*/</span>
 scores[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">82</span>; <span style="color:#75715e">/* changes value at the second position of the array to 88*/</span>
 
 std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl; <span style="color:#75715e">/* outputs 93, previously 100*/</span>
 std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl; <span style="color:#75715e">/* outputs 82, previously 98 */</span>
 </code></pre></div><p>Can you guess what the output would be for the code snippet below?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> scores <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 </code></pre></div><p>This would output an hexadecimal value representing the address of the first element of <code>scores</code>. This is simply due to the fact that the array name represents the location (address) of the first element of the array in memory. We can, then, imagine the indexes inside the square brackets as being simply offsets from that initial position.</p>
 <h3 id="time-complexity">Time Complexity</h3>
 <table>
 <thead>
 <tr>
-<th align="center">Access</th>
-<th align="center">Search</th>
-<th align="center">Insertion</th>
-<th align="center">Deletion</th>
+<th style="text-align:center">Access</th>
+<th style="text-align:center">Search</th>
+<th style="text-align:center">Insertion</th>
+<th style="text-align:center">Deletion</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">O(1)</td>
-<td align="center">O(n)</td>
-<td align="center">O(n)</td>
-<td align="center">O(n)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">O(n)</td>
 </tr>
 </tbody>
 </table>
@@ -174,7 +175,7 @@ std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt
 <table>
 <thead>
 <tr>
-<th align="center">O(n)</th>
+<th style="text-align:center">O(n)</th>
 </tr>
 </thead>
 </table>
@@ -213,7 +214,7 @@ std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt
     ></a>
     <a class="border"></a></div>
   <div class="footer-info">
-    2023  © torras | 
+    2024  © torras | 
     <a href="https://github.com/athul/archie">Based on Archie Theme</a> | Built
     with <a href="https://gohugo.io">Hugo</a>
   </div>

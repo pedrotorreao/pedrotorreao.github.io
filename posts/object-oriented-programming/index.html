@@ -2,17 +2,18 @@
 <html><head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Object Oriented Programming (OOP) - torras</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
+	<meta name="description" content="Basics OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
 	<meta property="og:image" content=""/>
 	<meta property="og:title" content="Object Oriented Programming (OOP)" />
-<meta property="og:description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
+<meta property="og:description" content="Basics OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pedrotorreao.github.io/posts/object-oriented-programming/" />
+<meta property="og:url" content="https://pedrotorreao.github.io/posts/object-oriented-programming/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-16T19:22:42-03:00" />
 <meta property="article:modified_time" content="2023-05-16T19:22:42-03:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Object Oriented Programming (OOP)"/>
-<meta name="twitter:description" content="Basics Programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities."/>
+<meta name="twitter:description" content="Basics OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called classes, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for objects. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities."/>
 <script src="https://pedrotorreao.github.io/js/feather.min.js"></script>
 	
 	
@@ -98,16 +99,16 @@
 
 		<section class="body">
 			<h2 id="basics">Basics</h2>
-<p>Programming paradigm which focuses on the organization of the software into reusable pieces of code called <em><code>classes</code></em>, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for <em><code>objects</code></em>. Objects are concrete instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</p>
+<p>OOP is a programming paradigm which focuses on the organization of the software into reusable pieces of code called <em><code>classes</code></em>, based on the grouping of related data and behaviors. Theses classes are user-defined data types that can be thought of as general blueprints or recipes that define the structure for <em><code>objects</code></em>. Objects are <strong>concrete</strong> instances of classes. They usually have more specifically defined data and they can be used to model real-world objects and/or more abstract entities.</p>
 <p>Classes are usually defined in terms of <code>attributes</code> and <code>methods</code>:</p>
 <ul>
-<li>Attributes represent the state of an object and they are used to store relevant data.</li>
-<li>Methods are functions defined inside a class that describe the behaviors of an object.</li>
+<li>Attributes represent the <strong>state</strong> of an object and they are used to store relevant data.</li>
+<li>Methods are functions defined inside a class that describe the <strong>behaviors</strong> of an object.</li>
 </ul>
 <p>In the UML diagram below, we have a very basic <code>Person</code> class which contains a few private attributes and public methods:</p>
 <p><img src="/images/oop_class_1.png" alt="OOP_class_example_1"></p>
-<p>Below is a C++ implementation of this class:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+<p>Below is how a C++ implementation of this class could look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
   <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
     string name;
     string country;
@@ -143,7 +144,7 @@
 <p><img src="/images/oop_class_2.png" alt="OOP_class_example_2"></p>
 <p>Both subclasses <code>Teenager</code> and <code>Adult</code> inherit the methods and attributes from the <code>Person</code> class and each one extended the original functionality in their own way.</p>
 <p>Below are basic C++ implementations of these classes. Keep in mind that, as done for the previous example, for the sake of simplicity, I&rsquo;ve omitted important aspects like data validation.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teenager</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Person {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teenager</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> Person {
   <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
     string schoolYear;
     string dreamJob;
@@ -187,8 +188,8 @@
     }
     ...
 };
-</code></pre></div><p>Notice that, at least in C++, the <code>inherited</code> part of the subclass <strong>MUST</strong> be initialized <strong>BEFORE</strong> the subclass is initialized. When a subclass is created, the base class&rsquo; constructor executes first, then the subclass&rsquo; constructor is called. However, it&rsquo;s very important to mention the fact that a subclass <strong>DOES NOT</strong> inherit the base class&rsquo; constructors, destructors, overloaded assignment operators and class <code>friend</code> functions. So, in order for the base class attributes to be initialized, the desired constructor must be directly invoked from the derived class. That&rsquo;s what we see in these parts of the code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">...
+</code></pre></div><p>Notice that, at least in C++, the <code>inherited</code> part of the subclass <strong>MUST</strong> be initialized <strong>BEFORE</strong> the subclass is initialized. When a subclass is created, the base class' constructor executes first, then the subclass' constructor is called. However, it&rsquo;s very important to mention the fact that a subclass <strong>DOES NOT</strong> inherit the base class' constructors, destructors, overloaded assignment operators and class <code>friend</code> functions. So, in order for the base class attributes to be initialized, the desired constructor must be directly invoked from the derived class. That&rsquo;s what we see in these parts of the code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">...
 Teenager(string schoolYear, string dreamJob)
       <span style="color:#f92672">:</span> Person(name, country, occupation), schoolYear{schoolYear}, dreamJob{dreamJob} {}
 
@@ -205,13 +206,13 @@ Adult(boolean married, <span style="color:#66d9ef">int</span> children)
 <h3 id="_abstraction_"><em>Abstraction</em></h3>
 <p>An abstraction is a model of a real-world object or event, limited to a specific context, focusing on the details which are relevant to said context while omitting the rest. As an example of abstraction, let&rsquo;s think of how we use a coffee machine. We don&rsquo;t really need to know all about its inner workings, its electronics, and the process they perform in order to make coffee. Most of the time it&rsquo;s just a matter of pushing a button. Thus, all the engineering and unnecessary details that are not relevant to the user are hidden, and only an interface (i.e. the button) is exposed, <em>&ldquo;abstracting away&rdquo;</em> the complexity.</p>
 <p>Similar to what was shown for encapsulation, abstraction uses classes to model real-world scenarios and hides the details behind <em><code>private</code></em> attributes and methods, exposing only what is relevant through high-level mechanisms such as <em><code>public</code></em> methods and <code>interfaces</code>.</p>
-<h3 id="inheritance">Inheritance</h3>
+<h3 id="_inheritance_"><em>Inheritance</em></h3>
 <p>We&rsquo;ve touched on this principle previously when discussing the basics of OOP. Inheritance represents the ability to create new classes from existing ones. The main benefit here is reusability, thus reducing the amount of duplicated code.</p>
 <p>Objects may share a lot of similarities, maybe they have the same attributes or share the same logics. In this way, if the need arises for a class with similar class members to an existing one, instead of repeating the same code over and over, we may simply derive a <em><code>subclass</code></em> from the existing class (<em><code>parent/base class</code></em>), extending its functionality by adding the missing pieces (new attributes and/or methods). By doing this, the common class members are kept in the <em><code>parent</code></em> class, while the unique attributes/methods are kept in its <em><code>subclasses</code></em>, so each class adds only what is missing to it while reusing the common logic shared by the <em><code>parent</code></em> class. This forms a class hierarchy, as seen before.</p>
-<h3 id="polymorphism">Polymorphism</h3>
+<h3 id="_polymorphism_"><em>Polymorphism</em></h3>
 <p>By making use of polymorphism, we can have class-specific behavior for the same inherited method (same function signature). This can be achieved by defining the <em><code>parent</code></em> class as an <em><code>abstract class</code></em> or <em><code>interface</code></em>. This interface is responsible for outlining the common methods which will be overriden by the <em><code>subclasses</code></em> to implement their specific versions of it.</p>
 <p>The example below shows a simple application of polymorphism. The parent class <code>Citizen</code> is an <code>interface</code>, created by adding a pure virtual function to a C++ abstract class. The pure virtual function <code>greet()</code> must be overriden by each subclass derived from <code>Citizen</code> if we want them to be concrete classes and not also interfaces.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// abstract class
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// abstract class
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Citizen</span> {
     <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
       <span style="color:#75715e">// pure virtual function, this is what make this class an
@@ -306,7 +307,7 @@ Adult(boolean married, <span style="color:#66d9ef">int</span> children)
     ></a>
     <a class="border"></a></div>
   <div class="footer-info">
-    2023  © torras | 
+    2024  © torras | 
     <a href="https://github.com/athul/archie">Based on Archie Theme</a> | Built
     with <a href="https://gohugo.io">Hugo</a>
   </div>
